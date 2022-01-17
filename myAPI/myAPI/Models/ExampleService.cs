@@ -10,15 +10,15 @@ namespace myAPI.Models
     {
         public static void FillDb(EnContactoContext context)
         {
-            if(!context.Users.Any())
+            if (!context.Users.Any())
             {
                 Visibility visibility = new Visibility()
-                { 
-                     Name = "some visibility"
+                {
+                    Name = "some visibility"
                 };
 
                 List<UserPhoto> photos = new List<UserPhoto>()
-                { 
+                {
                     new UserPhoto()
                     {
                           Directory = "Photos",
@@ -73,7 +73,7 @@ namespace myAPI.Models
                     GenderName = "hermafrodita"
                 };
                 List<UserInfo> infos = new List<UserInfo>()
-                { 
+                {
                     new UserInfo()
                     {
                          Additional = "bla",
@@ -81,7 +81,7 @@ namespace myAPI.Models
                          Status = "some statys",
                           City = "bla",
                           Gender = female,
-                             
+
                     },
                     new UserInfo()
                     {
@@ -121,7 +121,7 @@ namespace myAPI.Models
                     }
                 };
 
-             
+
                 List<User> users = new List<User>()
                 {
                     new User()
@@ -129,7 +129,7 @@ namespace myAPI.Models
                          Name = "name 1",
                          Password = "passord 1",
                          Login = "login 1",
-                         
+
                          UserInfo = infos[0]
                     },
                     new User()
@@ -137,7 +137,7 @@ namespace myAPI.Models
                          Name = "name 2",
                          Password = "passord 2",
                          Login = "login 2",
-                         
+
                          UserInfo = infos[1]
                     },
                     new User()
@@ -145,7 +145,7 @@ namespace myAPI.Models
                          Name = "name 3",
                          Password = "passord 3",
                          Login = "login 3",
-                        
+
                          UserInfo = infos[2]
                     },
                     new User()
@@ -153,7 +153,7 @@ namespace myAPI.Models
                          Name = "name 4",
                          Password = "passord 4",
                          Login = "login 4",
-                        
+
                          UserInfo = infos[3]
                     },
                     new User()
@@ -161,12 +161,12 @@ namespace myAPI.Models
                          Name = "name 5",
                          Password = "passord 5",
                          Login = "login 5",
-                        
+
                          UserInfo = infos[4]
                     }
                 };
 
-                
+
 
                 context.Genders.AddRange(male, female, hermaphrodite);
                 context.Visibilities.Add(visibility);
@@ -178,9 +178,9 @@ namespace myAPI.Models
 
                 context.SaveChanges();
 
-                
 
-             
+
+
 
 
                 context.Users.AddRange(users);
@@ -298,255 +298,303 @@ namespace myAPI.Models
                 context.Invitations.Add(invitation);
                 context.SaveChanges();
 
-                //UserPhoto communityAvaPhoto = new UserPhoto()
-                //{
-                //    Directory = "Photos",
-                //    FileName = "com file name 1",
-                //    Visibility = visibility
-                //};
 
-                //Post communityAvaPost = new Post()
-                //{
-                //    Title = "new community ava",
-                //    Text = "",
-                //    User = users[0],
-                //    Visibility = visibility
-                //};
-                //communityAvaPhoto.Post = communityAvaPost;
+                Community community = new Community()
+                {
+                    Name = "some community",
+                    Description = "kukukukukuku",
+                    Creator = users[0]
+                };
+                context.Communities.Add(community);
+                context.SaveChanges();
 
-                //Community community = new Community()
-                //{
-                //    Name = "some community",
-                //    Description = "kukukukukuku",
-                //    Ava = communityAvaPhoto,
-                //    Creator = users[0]
-                //};
-                //communityAvaPost.Community = community;
-                //context.UserPhotos.Add(communityAvaPhoto);
-                //context.Posts.Add(communityAvaPost);
+                Post communityAvaPost = new Post()
+                {
+                    Title = "new community ava",
+                    Text = "",
+                    User = users[0],
+                    Visibility = visibility,
+                    Community = community
+                };
+                context.Posts.Add(communityAvaPost);
+                context.SaveChanges();
 
+                UserPhoto communityAvaPhoto = new UserPhoto()
+                {
+                    Directory = "Photos",
+                    FileName = "com file name 1",
+                    Visibility = visibility,
+                    Extension = "jpg",
+                    Community = community,
+                    Post = communityAvaPost
+                };
 
-                //Subscribition subscribition = new Subscribition()
-                //{
-                //    Community = community,
-                //    Subscriber = users[3]
-                //};
-                //Subscribition subscribition1 = new Subscribition()
-                //{
-                //    Community = community,
-                //    Subscriber = users[2]
-                //};
-                //Membership membership = new Membership()
-                //{
-                //    Community = community,
-                //    User = users[1]
-                //};
-                //context.Communities.Add(community);
-                //context.Subscribitions.AddRange(subscribition, subscribition1);
-                //context.Memberships.Add(membership);
+                context.UserPhotos.Add(communityAvaPhoto);
+                context.SaveChanges();
+
+                community.Ava = communityAvaPhoto;
+                context.Communities.Update(community);
+                context.SaveChanges();
 
 
+                Subscribition subscribition = new Subscribition()
+                {
+                    Community = community,
+                    Subscriber = users[3]
+                };
+                Subscribition subscribition1 = new Subscribition()
+                {
+                    Community = community,
+                    Subscriber = users[2]
+                };
+                Membership membership = new Membership()
+                {
+                    Community = community,
+                    User = users[1]
+                };
+                context.Subscribitions.AddRange(subscribition, subscribition1);
+                context.SaveChanges();
+
+                context.Memberships.Add(membership);
+                context.SaveChanges();
 
 
 
-                //Post usersPost = new Post()
-                //{
-                //     Title = "some title of user",
-                //     Text = "ku text",
-                //     User = users[0],
-                //     Visibility = visibility
-                //};
-                //Post comPost = new Post()
-                //{
-                //    Title = "some title of com",
-                //    Text = "com text",
-                //    User = users[0],
-                //    Visibility = visibility,
-                //    Community = community
-                //};
-
-                //UserPhoto photoU = new UserPhoto()
-                //{
-                //    Directory = "Photos",
-                //    FileName = "photo name 1",
-                //    Visibility = visibility,
-                //    LineNumber = 1,
-                //    Post = usersPost,
-                //    User = users[0]
-                //};
-                //UserVideo videoU = new UserVideo()
-                //{
-                //    Directory = "Videos",
-                //    FileName = "video name 1",
-                //    Visibility = visibility,
-                //    LineNumber = 2,
-                //    Post = usersPost,
-                //    User = users[0]
-                //};
-                //UserDocument docU = new UserDocument()
-                //{
-                //    Directory = "Documents",
-                //    FileName = "doc name 1",
-                //    Visibility = visibility,
-                //    Post = usersPost,
-                //    User = users[0]
-                //};
-
-                //UserPhoto photoC = new UserPhoto()
-                //{
-                //    Directory = "Photos",
-                //    FileName = "photo name 2",
-                //    Visibility = visibility,
-                //    LineNumber = 1,
-                //    Post = comPost,
-                //    User = users[0]
-                //};
-                //UserVideo videoC = new UserVideo()
-                //{
-                //    Directory = "Videos",
-                //    FileName = "video name 2",
-                //    Visibility = visibility,
-                //    LineNumber = 2,
-                //    Post = comPost,
-                //    User = users[0]
-                //};
-                //UserDocument docC = new UserDocument()
-                //{
-                //    Directory = "Documents",
-                //    FileName = "doc name 2",
-                //    Visibility = visibility,
-                //    Post = comPost,
-                //    User = users[0]
-
-                //};
-                //context.Posts.AddRange(comPost, usersPost);
-                //context.UserPhotos.AddRange(photoC, photoU);
-                //context.UserVideos.AddRange(videoC, videoU);
-                //context.UserDocuments.AddRange(docC, docU);
 
 
-                //List<LikedEntity> likedEntities = new List<LikedEntity>()
-                //{
-                //    new LikedEntity()
-                //    {
-                //         Entity = usersPost,
-                //         User = users[1]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //         Entity = usersPost,
-                //         User = users[2]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //         Entity = usersPost,
-                //         User = users[3]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //         Entity = comPost,
-                //         User = users[1]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //         Entity = comPost,
-                //         User = users[2]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //         Entity = comPost,
-                //         User = users[3]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //         Entity = comPost,
-                //         User = users[4]
-                //    }
 
-                //};
-                //context.LikedEntities.AddRange(likedEntities);
+                Post usersPost = new Post()
+                {
+                    Title = "some title of user",
+                    Text = "ku text",
+                    User = users[0],
+                    Visibility = visibility
+                };
+                Post comPost = new Post()
+                {
+                    Title = "some title of com",
+                    Text = "com text",
+                    User = users[0],
+                    Visibility = visibility,
+                    Community = community
+                };
 
-                //List<Comment> comments = new List<Comment>()
-                //{
-                //    new Comment()
-                //    {
-                //         Text = "text comment 1",
-                //         User = users[1],
-                //    },
-                //     new Comment()
-                //    {
-                //         Text = "text comment 2",
-                //         User = users[1],
-                //    },
-                //      new Comment()
-                //    {
-                //         Text = "text comment 3",
-                //         User = users[1],
-                //    },
+                context.Posts.AddRange(comPost, usersPost);
+                context.SaveChanges();
 
-                //};
-                //context.Comments.AddRange(comments);
+                UserPhoto photoU = new UserPhoto()
+                {
+                    Directory = "Photos",
+                    FileName = "photo name 1",
+                    Visibility = visibility,
+                    LineNumber = 1,
+                    Post = usersPost,
+                    Extension = "jpg",
+                    User = users[0]
+                };
+                UserAudio audioU = new UserAudio()
+                {
+                    Directory = "Audios",
+                    FileName = "audio name 1",
+                    Visibility = visibility,
+                    Post = usersPost,
+                    Extension = "mp3",
+                    User = users[0]
+                };
+                UserVideo videoU = new UserVideo()
+                {
+                    Directory = "Videos",
+                    FileName = "video name 1",
+                    Visibility = visibility,
+                    LineNumber = 2,
+                    Post = usersPost,
+                    Extension = "mp4",
+                    User = users[0]
+                };
+                UserDocument docU = new UserDocument()
+                {
+                    Directory = "Documents",
+                    FileName = "doc name 1",
+                    Visibility = visibility,
+                    Post = usersPost,
+                    Extension = "txt",
+                    User = users[0]
+                };
 
-                //List<Answer> answers = new List<Answer>()
-                //{
-                //    new Answer()
-                //    {
-                //         Text = "aswer text 1",
-                //         Comment = comments[0],
-                //         FromUser = users[2]
-                //    },
-                //    new Answer()
-                //    {
-                //         Text = "aswer text 1",
-                //         Comment = comments[0],
-                //         FromUser = users[3],
-                //         ToUser = users[2]
-                //    },
-                //    new Answer()
-                //    {
-                //         Text = "aswer text 1",
-                //         Comment = comments[0],
-                //         FromUser = users[3]
-                //    },
-                //};
-                //context.Answers.AddRange(answers);
-                //List<LikedEntity> commentLiks = new List<LikedEntity>()
-                //{
-                //    new LikedEntity()
-                //    {
-                //        Entity = comments[0],
-                //        User = users[2]
-                //    },
-                //    new LikedEntity()
-                //    {
-                //        Entity = answers[1],
-                //        User = users[1]
-                //    }
-                //};
-                //context.LikedEntities.AddRange(commentLiks);
-                //List<CommentedEntity> commentedEntities = new List<CommentedEntity>()
-                //{
-                //    new CommentedEntity()
-                //    {
-                //        Comment = comments[0],
-                //        Entity = comPost,
-                //        User = users[1]
-                //    },
-                //    new CommentedEntity()
-                //    {
-                //        Comment = comments[1],
-                //        Entity = usersPost,
-                //        User = users[1]
-                //    },
-                //    new CommentedEntity()
-                //    {
-                //        Comment = comments[0],
-                //        Entity = photoC,
-                //        User = users[1]
-                //    },
-                //};
-                //context.CommentedEntities.AddRange(commentedEntities);
-                //context.SaveChanges();
+                UserPhoto photoC = new UserPhoto()
+                {
+                    Directory = "Photos",
+                    FileName = "photo name 2",
+                    Visibility = visibility,
+                    LineNumber = 1,
+                    Post = comPost,
+                    Extension = "jpg",
+                    Community = community
+                };
+                UserVideo videoC = new UserVideo()
+                {
+                    Directory = "Videos",
+                    FileName = "video name 2",
+                    Visibility = visibility,
+                    LineNumber = 2,
+                    Post = comPost,
+                    Extension = "mp4",
+                    Community = community
+                };
+                UserAudio audioC = new UserAudio()
+                {
+                    Directory = "Audios",
+                    FileName = "audio name 2",
+                    Visibility = visibility,
+                    Post = comPost,
+                    Extension = "mp3",
+                    Community = community
+                };
+                UserDocument docC = new UserDocument()
+                {
+                    Directory = "Documents",
+                    FileName = "doc name 2",
+                    Visibility = visibility,
+                    Extension = "txt",
+                    Post = comPost,
+                    Community = community
+
+                };
+                context.UserAudios.AddRange(audioU, audioC);
+                context.UserPhotos.AddRange(photoC, photoU);
+                context.UserVideos.AddRange(videoC, videoU);
+                context.UserDocuments.AddRange(docC, docU);
+                context.SaveChanges();
+
+
+
+                List<LikedEntity> likedEntities = new List<LikedEntity>()
+               {
+                   new LikedEntity()
+                   {
+                        Entity = usersPost,
+                        User = users[1]
+                   },
+                   new LikedEntity()
+                   {
+                        Entity = usersPost,
+                        User = users[2]
+                   },
+                   new LikedEntity()
+                   {
+                        Entity = usersPost,
+                        User = users[3]
+                   },
+                   new LikedEntity()
+                   {
+                        Entity = comPost,
+                        User = users[1]
+                   },
+                   new LikedEntity()
+                   {
+                        Entity = comPost,
+                        User = users[2]
+                   },
+                   new LikedEntity()
+                   {
+                        Entity = comPost,
+                        User = users[3]
+                   },
+                   new LikedEntity()
+                   {
+                        Entity = comPost,
+                        User = users[4]
+                   }
+
+               };
+                context.LikedEntities.AddRange(likedEntities);
+                context.SaveChanges();
+
+                List<Comment> comments = new List<Comment>()
+               {
+                   new Comment()
+                   {
+                        Text = "text comment 1",
+                        User = users[1],
+                   },
+                    new Comment()
+                   {
+                        Text = "text comment 2",
+                        User = users[1],
+                   },
+                     new Comment()
+                   {
+                        Text = "text comment 3",
+                        User = users[1],
+                   },
+
+               };
+                context.Comments.AddRange(comments);
+                context.SaveChanges();
+
+                List<Answer> answers = new List<Answer>()
+               {
+                   new Answer()
+                   {
+                        Text = "aswer text 1",
+                        Comment = comments[0],
+                        FromUser = users[2]
+                   },
+                   new Answer()
+                   {
+                        Text = "aswer text 1",
+                        Comment = comments[0],
+                        FromUser = users[3],
+                        ToUser = users[2]
+                   },
+                   new Answer()
+                   {
+                        Text = "aswer text 1",
+                        Comment = comments[0],
+                        FromUser = users[3]
+                   },
+               };
+                context.Answers.AddRange(answers);
+                context.SaveChanges();
+
+                List<LikedEntity> commentLiks = new List<LikedEntity>()
+               {
+                   new LikedEntity()
+                   {
+                       Entity = comments[0],
+                       User = users[2]
+                   },
+                   new LikedEntity()
+                   {
+                       Entity = answers[1],
+                       User = users[1]
+                   }
+               };
+                context.LikedEntities.AddRange(commentLiks);
+                context.SaveChanges();
+                List<CommentedEntity> commentedEntities = new List<CommentedEntity>()
+               {
+                   new CommentedEntity()
+                   {
+                       Comment = comments[0],
+                       Entity = comPost,
+                       User = users[1]
+                   },
+                   new CommentedEntity()
+                   {
+                       Comment = comments[1],
+                       Entity = usersPost,
+                       User = users[1]
+                   },
+                   new CommentedEntity()
+                   {
+                       Comment = comments[0],
+                       Entity = photoC,
+                       User = users[1]
+                   },
+               };
+                context.CommentedEntities.AddRange(commentedEntities);
+                context.SaveChanges();
             }
         }
     }

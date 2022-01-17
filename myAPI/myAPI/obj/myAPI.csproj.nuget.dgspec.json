@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tat1a\\source\\repos\\myAPI\\myAPI\\myAPI.csproj": {}
+    "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\myAPI\\myAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\BLL.csproj": {
+    "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\Tat1a\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,11 +34,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj"
+              "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj"
+              "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj": {
+    "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Tat1a\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -143,14 +143,14 @@
         }
       }
     },
-    "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj": {
+    "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\Tat1a\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -203,14 +203,14 @@
         }
       }
     },
-    "C:\\Users\\Tat1a\\source\\repos\\myAPI\\myAPI\\myAPI.csproj": {
+    "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\myAPI\\myAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\myAPI\\myAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\myAPI\\myAPI.csproj",
         "projectName": "myAPI",
-        "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\myAPI\\myAPI.csproj",
+        "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\myAPI\\myAPI.csproj",
         "packagesPath": "C:\\Users\\Tat1a\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\myAPI\\obj\\",
+        "outputPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\myAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -233,14 +233,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\BLL.csproj"
+              "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj"
+              "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DTO\\DTO.csproj"
+              "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DTO\\DTO.csproj"
               }
             }
           }

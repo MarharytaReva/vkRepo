@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OLw9w6vY9YbM19LX3A+EIsdaZPVs4r+rqblmOXfFZmiA2TB7bsxDejHsScZHMYLFB1rpdIjLRcKHXCRYnm4EPw==",
+  "dgSpecHash": "fym/xASrDT/h0y7Ql4vFfnP5LPwrsdCSsBlfREZsfDsD3fj1m1vXIvtPX3fi3ax6mu2sIdrrvmCi3WHxg83l7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\BLL\\BLL.csproj",
+  "projectFilePath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tat1a\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Tat1a\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

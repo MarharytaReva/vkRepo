@@ -13,7 +13,7 @@ namespace DTO
         public string Extension { get; set; }
         public string FileName { get; set; }
 
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         public int? CommunityId { get; set; }
         public int? PostId { get; set; }
     }

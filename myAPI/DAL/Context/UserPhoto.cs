@@ -23,7 +23,7 @@ namespace DAL.Context
 
         
         [ForeignKey("User")]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         public User User { get; set; }
 
         [ForeignKey("Community")]

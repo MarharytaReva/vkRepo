@@ -5708,11 +5708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\Tat1a\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tat1a\\source\\repos\\myAPI\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\Tat1a\\Desktop\\vkRepo\\myAPI\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
