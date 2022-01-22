@@ -37,6 +37,15 @@ namespace BLL
             task.Start();
             return task;
         }
+        protected Task<IEnumerable<D>> ConvertCollectionAsync(IEnumerable<T> enity)
+        {
+            Task<IEnumerable<D>> task = new Task<IEnumerable<D>>(() =>
+            {
+                return mapper.Map<IEnumerable<T>, IEnumerable<D>>(enity);
+            });
+            task.Start();
+            return task;
+        }
         protected Task<T> ConvertAsync(D item)
         {
             Task<T> task = new Task<T>(() =>
@@ -103,6 +112,12 @@ namespace BLL
                 return null;
             D item = await ConvertAsync(entity);
             return item;
+        }
+
+        public async Task<IEnumerable<D>> GetAllAsync(int pageNumber)
+        {
+            var res = (IEnumerable<T>) await repo.GetAll().Skip((pageNumber - 1) * paginationCount).Take(paginationCount).ToListAsync();
+            return await ConvertCollectionAsync(res);
         }
     }
 }

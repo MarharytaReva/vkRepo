@@ -12,7 +12,7 @@ namespace BLL
 {
     public class CommentManager : ManagerBase<Comment, CommentDTO>
     {
-        public CommentManager(IRepo<Comment> repo) : base(repo, 50)
+        public CommentManager(IRepo<Comment> repo) : base(repo, 5)
         {
             MapperConfiguration configuration = new MapperConfiguration(x =>
             {

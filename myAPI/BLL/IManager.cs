@@ -16,6 +16,6 @@ namespace BLL
         D Update(D item);
         Task<D> UpdateAsync(D item);
         Task<D> GetItemAsync(int id, int idSecond = 0);
-
+        Task<IEnumerable<D>> GetAllAsync(int pageNumber);
     }
 }
