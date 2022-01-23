@@ -22,3 +22,15 @@ C:\Users\Tat1a\Desktop\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileI
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.dll
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\DTO\obj\Debug\net5.0\ref\DTO.dll
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\bin\Debug\net5.0\DTO.deps.json
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\bin\Debug\net5.0\DTO.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\bin\Debug\net5.0\ref\DTO.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\bin\Debug\net5.0\DTO.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.AssemblyInfoInputs.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.AssemblyInfo.cs
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileInputs.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\ref\DTO.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DTO\obj\Debug\net5.0\DTO.pdb

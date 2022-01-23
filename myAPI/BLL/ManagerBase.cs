@@ -119,5 +119,13 @@ namespace BLL
             var res = (IEnumerable<T>) await repo.GetAll().Skip((pageNumber - 1) * paginationCount).Take(paginationCount).ToListAsync();
             return await ConvertCollectionAsync(res);
         }
+        public int Count()
+        {
+            return repo.Count();
+        }
+        public int Count(Func<T, bool> func)
+        {
+            return repo.Count(func);
+        }
     }
 }

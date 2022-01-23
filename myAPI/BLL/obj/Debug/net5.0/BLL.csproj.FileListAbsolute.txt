@@ -32,3 +32,20 @@ C:\Users\Tat1a\Desktop\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.dll
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\BLL\obj\Debug\net5.0\ref\BLL.dll
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\BLL.deps.json
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\BLL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\ref\BLL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\BLL.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\DAL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\DTO.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\DAL.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\bin\Debug\net5.0\DTO.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\ref\BLL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete

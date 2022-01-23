@@ -19,5 +19,12 @@ namespace DAL.Repos
             return (context as EnContactoContext).Users.Include(x => x.Ava)
                 .FirstOrDefault(x => x.UserId == id);
         }
+        public bool Login(string login, string password)
+        {
+            if (table.Count(x => x.Login == login && x.Password == password) == 1)
+                return true;
+            return false;
+        }
+        public int GetId(string login, string password) => table.FirstOrDefault(x => x.Login == login && x.Password == password).UserId;
     }
 }
