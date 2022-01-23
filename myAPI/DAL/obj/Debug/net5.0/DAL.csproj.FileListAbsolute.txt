@@ -22,3 +22,15 @@ C:\Users\Tat1a\Desktop\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileI
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.dll
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\DAL\obj\Debug\net5.0\ref\DAL.dll
 C:\Users\Tat1a\Desktop\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\bin\Debug\net5.0\DAL.deps.json
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\bin\Debug\net5.0\DAL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\bin\Debug\net5.0\ref\DAL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\bin\Debug\net5.0\DAL.pdb
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\ref\DAL.dll
+D:\it step academy\home works\vk\vkRepo\myAPI\DAL\obj\Debug\net5.0\DAL.pdb

@@ -12,6 +12,7 @@ using System.Net.Http.Headers;
 
 using System.Threading.Tasks;
 using DTO;
+using DAL.Repos;
 
 namespace myAPI.Controllers
 {
@@ -19,11 +20,29 @@ namespace myAPI.Controllers
     [Route("api/[controller]")]
     public class UserController : Controller
     {
-        UserManager userManager;
+        private UserManager userManager;
+        private FriendshipManager friendshipManager;
+        private UserPhotoManager photoMaganer;
+        private UserVideoManager videoManager;
+        private UserDocumentManager documentManager;
+        private UserAudioManager audioManager;
+        private SubscribitionManager subscribitionManager;
 
-        public UserController(UserManager userManager)
+        public UserController(UserManager userManager, 
+                              FriendshipManager fm,
+                              UserPhotoManager phm,
+                              UserVideoManager vm,
+                              UserDocumentManager dm,
+                              UserAudioManager am,
+                              SubscribitionManager sm)
         {
             this.userManager = userManager;
+            friendshipManager = fm;
+            photoMaganer = phm;
+            videoManager = vm;
+            documentManager = dm;
+            audioManager = am;
+            subscribitionManager = sm;
         }
         [HttpGet("{id:int}")]
         public async Task<ActionResult<UserDTO>> Get(int id)
@@ -33,10 +52,40 @@ namespace myAPI.Controllers
                 return NotFound();
             return user;
         }
-        [HttpGet("/getCollectionCount/{id:int}/{collectionName}")]
-        public async Task<ActionResult<int>> GetCollectionCount(int id, string collectionName)
+        [HttpGet("/frindCount/{id:int}")]
+        public async Task<ActionResult<int>> FrindCount(int id)
         {
-            int count = await userManager.GetCollectionCountAsync(collectionName, id);
+            int count = friendshipManager.Count(new Func<DAL.Context.Friendship, bool>(x => x.FirstUserId == id));
+            return count;
+        }
+        [HttpGet("/photoCount/{id:int}")]
+        public async Task<ActionResult<int>> PhotoCount(int id)
+        {
+            int count = photoMaganer.Count(new Func<DAL.Context.UserPhoto, bool>(x => x.UserId == id));
+            return count;
+        }
+        [HttpGet("/videoCount/{id:int}")]
+        public async Task<ActionResult<int>> VideoCount(int id)
+        {
+            int count = videoManager.Count(new Func<DAL.Context.UserVideo, bool>(x => x.UserId == id));
+            return count;
+        }
+        [HttpGet("/documentCount/{id:int}")]
+        public async Task<ActionResult<int>> DocumentCount(int id)
+        {
+            int count = documentManager.Count(new Func<DAL.Context.UserDocument, bool>(x => x.UserId == id));
+            return count;
+        }
+        [HttpGet("/audioCount/{id:int}")]
+        public async Task<ActionResult<int>> AudioCount(int id)
+        {
+            int count = audioManager.Count(new Func<DAL.Context.UserAudio, bool>(x => x.UserId == id));
+            return count;
+        }
+        [HttpGet("/subscribitionCount/{id:int}")]
+        public async Task<ActionResult<int>> SubscribitionCount(int id)
+        {
+            int count = subscribitionManager.Count(new Func<DAL.Context.Subscribition, bool>(x => x.SubscriberId == id));
             return count;
         }
     }

@@ -16,6 +16,8 @@ namespace DAL.Repos
             this.context = context;
             table = context.Set<T>();
         }
+        public int Count() => table.Count();
+        public int Count(Func<T, bool> func) => table.Count(func);
         public int GetCollectionCount(string collectionName, int id, int idSecond = 0)
         {
           
@@ -49,19 +51,23 @@ namespace DAL.Repos
 
         public IQueryable<T> GetAll()
         {
-            return table;
+            return table.AsNoTracking();
         }
 
        
 
         public T GetItem(int id, int idSecond = 0)
         {
-            return table.Find(id);
+            var entity = table.Find(id);
+            context.Entry(entity).State = EntityState.Detached;
+            return entity;
         }
 
         public async Task<T> GetItemAsync(int id, int idSecond = 0)
         {
-            return await table.FindAsync(id);
+            var entity = await table.FindAsync(id);
+            context.Entry(entity).State = EntityState.Detached;
+            return entity;            
         }
 
         public void Save()

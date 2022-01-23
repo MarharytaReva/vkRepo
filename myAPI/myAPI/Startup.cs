@@ -64,6 +64,9 @@ namespace myAPI
             services.AddScoped<IRepo<UserInfo>, UserInfoRepo>();
             services.AddScoped<IRepo<UserPhoto>, UserPhotoRepo>();
             services.AddScoped<IRepo<UserVideo>, UserVideoRepo>();
+            services.AddScoped<IRepo<Friendship>, FriendshipRepo>();
+            services.AddScoped<IRepo<Subscribition>, SubscribitionRepo>();
+            services.AddScoped<IRepo<LikedEntity>, LikedEntityRepo>();
 
 
             services.AddScoped<VisibilityManager>(provider =>
@@ -124,6 +127,22 @@ namespace myAPI
                 var dependency = provider.GetRequiredService<IRepo<UserVideo>>();
                 return new UserVideoManager(dependency);
             });
+            services.AddScoped<FriendshipManager>(provider =>
+            {
+                var dependency = provider.GetRequiredService<IRepo<Friendship>>();
+                return new FriendshipManager(dependency);
+            });
+            services.AddScoped<SubscribitionManager>(provider =>
+            {
+                var dependency = provider.GetRequiredService<IRepo<Subscribition>>();
+                return new SubscribitionManager(dependency);
+            });
+            services.AddScoped<LikedEntityManager>(provider =>
+            {
+                var dependency = provider.GetRequiredService<IRepo<LikedEntity>>();
+                return new LikedEntityManager(dependency);
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

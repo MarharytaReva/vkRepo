@@ -67,5 +67,7 @@ namespace BLL
                 return result;
             });
         }
+        public bool Login(string login, string password) => (repo as UserRepo).Login(login, password);
+        public int GetId(string login, string password) => (repo as UserRepo).GetId(login, password);
     }
 }

@@ -104,5 +104,13 @@ namespace BLL
             D item = await ConvertAsync(entity);
             return item;
         }
+        public int Count()
+        {
+            return repo.Count();
+        }
+        public int Count(Func<T, bool> func)
+        {
+            return repo.Count(func);
+        }
     }
 }

@@ -8,6 +8,8 @@ namespace DAL.Repos
 {
     public interface IRepo<T> where T : class
     {
+        int Count();
+        int Count(Func<T, bool> func);
         int GetCollectionCount(string collectionName, int id, int idSecond = 0);
         IQueryable<T> GetAll();
         void Delete(T item);
